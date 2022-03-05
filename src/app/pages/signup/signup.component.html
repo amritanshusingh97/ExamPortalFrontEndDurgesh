@@ -1,1 +1,104 @@
-<p>signup works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 text-center" style="margin-top: 20px">
+      <div class="container">
+        <img src="../../../assets/logo.jpg" />
+      </div>
+      <h1 class="container">Register Here</h1>
+      <!-- {{ user | json }} -->
+      <form (ngSubmit)="formSubmit()">
+        <!-- Username feild by anular material -->
+        <mat-form-field class="container" appearance="outline">
+          <mat-label>Username</mat-label>
+          <input
+            [(ngModel)]="user.username"
+            name="username"
+            matInput
+            placeholder="Enter here"
+            required
+          />
+          <mat-hint>Username must be unique</mat-hint>
+        </mat-form-field>
+
+        <!-- password feild by anular material -->
+        <mat-form-field class="container" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input
+            type="password"
+            [(ngModel)]="user.password"
+            name="password"
+            matInput
+            placeholder="Enter here"
+            required
+          />
+        </mat-form-field>
+
+        <!-- Firstname feild by anular material -->
+        <mat-form-field class="container" appearance="outline">
+          <mat-label>Firstname</mat-label>
+          <input
+            type="text"
+            [(ngModel)]="user.firstName"
+            name="firstName"
+            matInput
+            placeholder="Enter here"
+            required
+          />
+        </mat-form-field>
+
+        <!-- Lastname feild by anular material -->
+        <mat-form-field class="container" appearance="outline">
+          <mat-label>Lastname</mat-label>
+          <input
+            type="text"
+            [(ngModel)]="user.lastname"
+            name="lastname"
+            matInput
+            placeholder="Enter here"
+            required
+          />
+        </mat-form-field>
+
+        <!-- Email feild by anular material -->
+        <mat-form-field class="container" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input
+            type="email"
+            [(ngModel)]="user.email"
+            name="email"
+            matInput
+            placeholder="Enter here"
+            required
+          />
+        </mat-form-field>
+
+        <!-- Phone Number feild by anular material -->
+        <mat-form-field class="container" appearance="outline">
+          <mat-label>Phone Number</mat-label>
+          <input
+            type="number"
+            [(ngModel)]="user.phone"
+            name="phone"
+            matInput
+            placeholder="Enter here"
+            required
+          />
+        </mat-form-field>
+
+        <div class="container">
+          <button type="submit" mat-raised-button color="primary">
+            Register
+          </button>
+          <button
+            type="reset"
+            style="margin-left: 20px"
+            mat-raised-button
+            color="warn"
+          >
+            Clear
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

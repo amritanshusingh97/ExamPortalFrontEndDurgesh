@@ -1,1 +1,55 @@
-<p>login works!</p>
+<h1>Welcome to Login page</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 text-center">
+      <!-- Using Mat card header for displaying logo username and password in a card view -->
+      <mat-card>
+        <div class="container">
+          <img src="../../../assets/logo.jpg" />
+        </div>
+
+        <h1 class="container">Login Here</h1>
+
+        <form>
+          <!-- Username -->
+          <mat-form-field class="container" appearance="outline">
+            <mat-label>User Name</mat-label>
+            <input
+              name="username"
+              type="text"
+              matInput
+              placeholder="Enter username here"
+              required
+            />
+          </mat-form-field>
+
+          <!-- Password -->
+          <mat-form-field class="container" appearance="outline">
+            <mat-label>User Password</mat-label>
+            <input
+              name="username"
+              type="password"
+              matInput
+              placeholder="Enter password here"
+              required
+            />
+          </mat-form-field>
+
+          <div class="container">
+            <button type="submit" mat-raised-button color="primary">
+              Sign In
+            </button>
+            <button
+              type="reset"
+              style="margin-left: 20px"
+              mat-raised-button
+              color="warn"
+            >
+              Reset
+            </button>
+          </div>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>
